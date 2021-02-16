@@ -10,14 +10,16 @@ This work is licensed under Attribution-NoDerivatives 4.0 International (CC BY-N
 Questions or problems can be posted on the Discussions page. Feedback and feature requests can also be posted there and are greatly appreciated as a way to improve the application.
 
 ## How to use CryoBase
+NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data storage and retrieval costs of AWS S3 `STANDARD` and `DEEP_ARCHIVE`.
+
 ### Step 1. Creating an AWS account
 1. Go to the Amazon AWS Management Console website and click `Create an AWS Account`.
 2. After creating the account, click on your username in the top menu bar of the AWS Management Console website and select `My Security Credentials`.
-3. Under the `Access keys (access key ID and secret access key)` section, click `Create New Access Key`. This produces produces an `AWS Access Key` and `AWS Secret Key`. You will use these keys later to configure CryoBase.
+3. Under the `Access keys (access key ID and secret access key)` section, click `Create New Access Key`. This produces an `AWS Access Key` and `AWS Secret Key`. You will use these keys later to configure CryoBase.
 
 ### Step 2. Creating an AWS storage bucket
 1. Within the AWS Management Console page navigate to the S3 section (found under the Storage service category).
-2. Here you will create a bucket, which is conceptually like a directory. Click `Create bucket`. Enter a bucket name (for example, `cryo-em-data`). Select the nearest AWS Region. Customize the bucket settings as desired and click `Create bucket` at the bottom of the page.
+2. Here you will create a bucket, which is conceptually like a directory that will store your data. Click `Create bucket`. Enter a bucket name (for example, *cryo-em-data*). Select the nearest AWS Region from the dropdown menu. Customize the bucket settings as desired and click `Create bucket` at the bottom of the page.
 
 ### Step 3. Configuring CryoBase
 1. Open CryoBase and register an account or login to your account.
@@ -29,4 +31,15 @@ Questions or problems can be posted on the Discussions page. Feedback and featur
 2. Select the desired storage class (`STANDARD` or `DEEP_ARCHIVE`). The details and costs of these classes is provided on the AWS S3 website. Essentially `STANDARD` is higher cost but can be downloaded on-demand, while `DEEP_ARCHIVE` is low-cost but requires a 12-48 hour retrieval step before data can be downloaded.
 3. Click `Start Upload`. While the upload is in progress you can freely switch to the `Data Archive` section to confirm that a new dataset entry is visible in the table.
 
-## Step 5. Downloading data
+### Step 5. Downloading data
+Data stored in the `STANDARD` storage class
+1. Select a dataset by clicking at the left end of a table row.
+2. Choose a local download path.
+3. Click `Start Download`.
+
+Data stored in the `DEEP_ARCHIVE` storage class
+1. Select a dataset by clicking at the left end of a table row.
+2. A Data Status of `Archived` means a data retrieval process must be initiated to make it available for download. Click the `Archived` button and wait until a notification confirms the data is being restored. Depending on the number of files in the dataset it may take a few minutes for this process to complete and the notification to display.
+3. A Data Status of `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restoration and change the button status to `Restored`.
+4. A Data Status of `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval has completed).
+5. A Data Status of `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to the `Archived` it will again be available for retrieval.
