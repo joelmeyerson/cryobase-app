@@ -6,8 +6,8 @@ Downloads for macOS and Linux are found under Releases.
 
 This work is licensed under Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nd/4.0/.
 
-## Questions, Feedback, and Feature Requests
-Please post questions. Feedback and feature requests are greatly appreciated as a way to improve the application.
+## Questions and Feedback
+Questions or problems can be posted on the Discussions page. Feedback and feature requests can also be posted there and are greatly appreciated as a way to improve the application.
 
 ## How to use CryoBase
 ### Step 1. Creating an AWS account
