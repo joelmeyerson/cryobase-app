@@ -1,10 +1,12 @@
 # CryoBase
 
-CryoBase is an application to manage cryo-EM data in the cloud with Amazon Web Service (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to access low-cost cloud storage to store cryo-EM datasets. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB as of 2/2021. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data and can access it even without CryoBase. 
+CryoBase is a graphical application to store and manage cryo-EM data on Amazon Web Service (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to access low-cost cloud storage to store cryo-EM data. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB as of 2/2021. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data and can access it even without CryoBase. 
 
 Downloads for macOS and Linux are found under Releases.
 
 This work is licensed under Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nd/4.0/.
+
+CryoBase is made primarily using React, AntD, and Electron frameworks.
 
 ## Questions and Feedback
 Questions or problems can be posted on the Discussions page. Feedback and feature requests can also be posted there and are greatly appreciated as a way to improve the application.
@@ -13,17 +15,17 @@ Questions or problems can be posted on the Discussions page. Feedback and featur
 NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data storage and retrieval costs of AWS S3 `STANDARD` and `DEEP_ARCHIVE`.
 
 ### Step 1. Creating an AWS account
-1. Go to the Amazon AWS Management Console website and click `Create an AWS Account`.
+1. Go to the AWS Management Console website and click `Create an AWS Account`.
 2. After creating the account, click on your username in the top menu bar of the AWS Management Console website and select `My Security Credentials`.
-3. Under the `Access keys (access key ID and secret access key)` section, click `Create New Access Key`. This produces an `AWS Access Key` and `AWS Secret Key`. You will use these keys later to configure CryoBase.
+3. Under the `Access keys (access key ID and secret access key)` section, click `Create New Access Key`. This generates an `AWS Access Key` and `AWS Secret Key`. You will use these keys later to configure CryoBase.
 
 ### Step 2. Creating an AWS storage bucket
 1. Within the AWS Management Console page navigate to the S3 section (found under the Storage service category).
-2. Here you will create a bucket, which is conceptually like a directory that will store your data. Click `Create bucket`. Enter a bucket name (for example, *cryo-em-data*). Select the nearest AWS Region from the dropdown menu. Customize the bucket settings as desired and click `Create bucket` at the bottom of the page.
+2. Here you will create a bucket, which is conceptually like a directory to store your data. Click `Create bucket`. Enter a bucket name (for example, *cryo-em-data*). Select the nearest AWS Region from the dropdown menu. Customize the bucket settings as desired and click `Create bucket` at the bottom of the page.
 
 ### Step 3. Configuring CryoBase
 1. Open CryoBase and register an account or login to your account.
-2. Click `Settings` (the gear icon). Enter a bucket name, AWS Access Key, and AWS Secret Key.
+2. Click `Settings` (the gear icon). Enter the bucket name, AWS Access Key, and AWS Secret Key.
 3. CryoBase will notify you if your AWS configuration details are valid. If you have already uploaded data to the target bucket using CryoBase then the `Data Archive` section will automatically populate to show the available datasets.
 
 ### Step 4. Uploading data
@@ -33,12 +35,12 @@ NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data 
 
 ### Step 5. Downloading data
 Data stored in the `STANDARD` storage class
-1. Select a dataset from the table.
+1. Click `Data Archive` and select a dataset from the table.
 2. Choose a local download path.
 3. Click `Start Download`.
 
 Data stored in the `DEEP_ARCHIVE` storage class
-1. Select a dataset from the table.
+1. Click `Data Archive` and select a dataset from the table.
 2. A Data Status of `Archived` means a data retrieval process must be initiated to make it available for download. Click the `Archived` button and wait until a notification confirms the data is being restored. Depending on the number of files in the dataset it may take a few minutes for this process to complete and the notification to display.
 3. A Data Status of `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restoration and change the button status to `Restored`.
 4. A Data Status of `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval has completed).
