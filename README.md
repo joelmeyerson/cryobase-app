@@ -1,6 +1,6 @@
 # CryoBase
 
-CryoBase is a graphical application to store and manage cryo-EM data on Amazon Web Service (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to store cryo-EM data using low-cost cloud storage. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the AWS S3 `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB as of 2/2021. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data even without CryoBase. 
+CryoBase is a graphical application to store and manage cryo-EM data on Amazon Web Service (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to store cryo-EM data using low-cost cloud storage. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the AWS S3 `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB/month as of 2/2021. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data even without CryoBase. 
 
 Downloads for macOS and Linux are found under Releases.
 
