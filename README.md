@@ -9,7 +9,7 @@ This work is licensed under Attribution-NoDerivatives 4.0 International (CC BY-N
 CryoBase is made with React, AntD, and Electron frameworks.
 
 ## Questions and Feedback
-Questions or problems can be posted on the Discussions page. Feedback and feature requests can also be posted there and are greatly appreciated as a way to improve the application.
+Questions can be posted on the Discussions page. Feedback and feature requests can also be posted there and are greatly appreciated as a way to improve the application.
 
 ## How to use CryoBase
 NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data storage and retrieval costs of AWS S3 `STANDARD` and `DEEP_ARCHIVE`.
