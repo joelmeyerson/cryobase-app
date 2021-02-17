@@ -31,7 +31,7 @@ NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data 
 ### Step 4. Uploading data
 1. Click `Upload Data` (the cloud icon). Enter the details for the cryo-EM dataset to be uploaded.
 2. Select the desired storage class (`STANDARD` or `DEEP_ARCHIVE`). The details and costs of these classes is provided on the AWS S3 website. Essentially `STANDARD` is higher cost but can be downloaded on-demand, while `DEEP_ARCHIVE` is low-cost but requires a 12-48 hour retrieval step before data can be downloaded.
-3. Click `Start Upload`. While the upload is in progress you can freely switch to the `Data Archive` section to confirm that a new dataset entry is visible in the table.
+3. Click `Start Upload`. While the upload is in progress you can freely switch to the `Data Archive` section to see the new dataset entry in the table.
 
 ### Step 5. Downloading data
 Data stored in the `STANDARD` storage class
