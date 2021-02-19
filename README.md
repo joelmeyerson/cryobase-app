@@ -28,7 +28,7 @@ NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data 
 2. Click `Settings` (the gear icon). Enter the bucket name, AWS Access Key, and AWS Secret Key.
 3. CryoBase will notify you if your AWS configuration details are valid. If you have already uploaded data to the target bucket using CryoBase then the `Data Archive` section will automatically populate to show the available datasets.
 
-
+![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/settings.png?raw=true)
 
 ### Step 4. Uploading data
 1. Click `Upload Data` (the cloud icon). Enter the details for the cryo-EM dataset to be uploaded.
