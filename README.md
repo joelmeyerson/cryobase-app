@@ -50,3 +50,5 @@ Data stored in the `DEEP_ARCHIVE` storage class
 * `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restoration and the button status will change to `Restored`.
 * `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval has completed).
 * `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to the `Archived` it will again be available for retrieval.
+
+![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/download.png?raw=true)
