@@ -35,6 +35,8 @@ NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data 
 2. Select the desired storage class (`STANDARD` or `DEEP_ARCHIVE`). The details and costs of these classes is provided on the AWS S3 website. Essentially `STANDARD` is higher cost but can be downloaded on-demand, while `DEEP_ARCHIVE` is low-cost but requires a 12-48 hour retrieval step before data can be downloaded.
 3. Click `Start Upload`. While the upload is in progress you can freely switch to the `Data Archive` section to see the new dataset entry in the table.
 
+![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/upload.png?raw=true)
+
 ### Step 5. Downloading data
 Data stored in the `STANDARD` storage class
 1. Click `Data Archive` and select a dataset from the table.
