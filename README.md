@@ -52,3 +52,11 @@ Data stored in the `DEEP_ARCHIVE` storage class
 * `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to the `Archived` it will again be available for retrieval.
 
 ![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/download.png?raw=true)
+
+## Other topics
+
+### How to delete data
+As a precaution CryoBase was designed without an interface for deleting data. However, data can easily be deleted from the AWS S3 web console.
+1. Navigate to the S3 section of the AWS console.
+2. Locate the bucket used by CryoBase (e.g. *cryo-em-data*). Within this bucket select the dataset you want to delete, and click `Delete`. AWS will go through a quick confirmation step to verify you actually want to delete the data.
+3. In addition, you should delete the associated metadata for the target dataset. This will ensure that CryoBase no longer displays the dataset as an entry in the Archive table. The metadata can be found in your bucket within the metadata path (e.g. *cryo-em-data/metadata*). Select the metadata for the target dataset and click `Delete`.
