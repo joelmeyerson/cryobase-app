@@ -1,6 +1,6 @@
 # CryoBase
 
-CryoBase is a graphical application to store and manage cryo-EM data using Amazon Web Service (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to store cryo-EM data using low-cost cloud storage. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the AWS S3 `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB/month. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data even without CryoBase. 
+CryoBase is a graphical application to store and manage cryo-EM data using Amazon Web Services (AWS) Simple Storage Solution (S3). The goal is to provide a convenient way to store cryo-EM data using low-cost cloud storage. The application has an interface for entering metadata for a cryo-EM dataset and uploading the dataset to S3. It supports the AWS S3 `STANDARD` storage class, and the `DEEP_ARCHIVE` storage class which is priced at about $1/TB/month. There is also an interface for browsing and downloading datasets stored on S3. CryoBase is designed to interact with the user's own AWS account so the user has complete control over the data even without CryoBase. 
 
 Builds for macOS and Linux can be downloaded in Releases.
 
@@ -49,7 +49,7 @@ Data stored in the `DEEP_ARCHIVE` storage class
 * `Archived` means a data retrieval process must be initiated to make it available for download. Click the `Archived` button and wait until a notification confirms the data is being restored. Depending on the number of files in the dataset it may take a few minutes for this process to complete and the notification to display.
 * `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restoration and the button status will change to `Restored`.
 * `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval has completed).
-* `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to the `Archived` it will again be available for retrieval.
+* `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to `Archived` status it will again be available for retrieval.
 
 ![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/download.png?raw=true)
 
