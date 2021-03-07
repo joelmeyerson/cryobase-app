@@ -38,12 +38,12 @@ NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data 
 ![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/upload.png?raw=true)
 
 ### Step 5. Downloading data
-Data stored in the `STANDARD` storage class
+Data stored in the `STANDARD` storage class:
 1. Click `Data Archive` and select a dataset from the table.
 2. Choose a local download path.
 3. Click `Start Download`.
 
-Data stored in the `DEEP_ARCHIVE` storage class
+Data stored in the `DEEP_ARCHIVE` storage class:
 1. Click `Data Archive` and select a dataset from the table.
 2. There are different `Data Status` categories relevant to interacting with data stored in the `DEEP_ARCHIVE` storage class.
 * `Archived` means a data retrieval process must be initiated to make it available for download. Click the `Archived` button and wait until a notification confirms the data is being restored. Depending on the number of files in the dataset it may take a few minutes for this process to complete and the notification to display.
