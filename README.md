@@ -47,8 +47,8 @@ Data stored in the `DEEP_ARCHIVE` storage class
 1. Click `Data Archive` and select a dataset from the table.
 2. There are different `Data Status` categories relevant to interacting with data stored in the `DEEP_ARCHIVE` storage class.
 * `Archived` means a data retrieval process must be initiated to make it available for download. Click the `Archived` button and wait until a notification confirms the data is being restored. Depending on the number of files in the dataset it may take a few minutes for this process to complete and the notification to display.
-* `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restoration and the button status will change to `Restored`.
-* `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval has completed).
+* `Restoring` means that AWS has marked the data to be restored. Clicking the `Restoring` button will check the status of the restoration process. Once the data is restored, clicking this button will confirm the restored status of the data and the button will change to `Restored`.
+* `Restored` means the data has been retrieved and is available for download. After selecting the table row, choose a local download path and click `Start Download`. Clicking the `Restored` button will display a notification with the estimate for when the data will return to `Archived` status (3 days from the time data retrieval completed).
 * `Archiving` means the recovered data has partially expired and is being returned to `Archived` status. Once the data has completely returned to `Archived` status it will again be available for retrieval.
 
 ![alt text](https://github.com/joelmeyerson/cryobase-app/blob/main/download.png?raw=true)
