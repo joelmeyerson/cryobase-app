@@ -12,7 +12,7 @@ This work is licensed under Attribution-NonCommercial-NoDerivatives 4.0 Internat
 Questions can be posted on the Discussions page or emailed to jrmeyerson@gmail.com. Feedback and feature requests are also greatly appreciated as a way to improve the application.
 
 ## How to use CryoBase
-NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data storage and retrieval costs of AWS S3 `STANDARD` and `DEEP_ARCHIVE` ([link](https://aws.amazon.com/s3/pricing/)).
+NOTE: Before using AWS S3 or CryoBase please familiarize yourself with the data storage and retrieval costs of AWS S3 ([link](https://aws.amazon.com/s3/pricing/)).
 
 ### Step 1. Creating an AWS account
 1. Go to the AWS Management Console website and click `Create an AWS Account`.
